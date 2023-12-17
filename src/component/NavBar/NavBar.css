@@ -1,0 +1,28 @@
+.NavBar{
+    background-color: #1C2B35;
+    color: white;
+    height: 80px;
+    width: 100%;
+    padding: 0px 97px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    width: 140px;
+    height: 40px;
+    margin: 19px 0px 21px 112px;
+}
+.NavBar div a{
+    color: white;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-top: 30px;
+    
+}
+
+.NavBar div a:hover{
+    color: orange;
+}
+
