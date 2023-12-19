@@ -6,6 +6,11 @@ const Cart = (props) => {
     const {cart} = props;
     const price = CalculateCart(cart);
 
+    const clearCart = () => {
+        localStorage.removeItem('productCount');
+        window.location.reload();
+    }
+
     return (
         <div>
             <div className="shopping-cart">
@@ -17,6 +22,11 @@ const Cart = (props) => {
                 <h4>Grand Total: ${price.grandTotal}</h4>
 
                
+            </div>
+
+            <div className="buttons">
+                <button className="clear-btn" onClick={clearCart}>Clear Cart</button>
+                <button className="review-btn">Review Order</button>
             </div>
         </div>
     );

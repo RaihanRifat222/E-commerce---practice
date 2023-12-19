@@ -1,7 +1,7 @@
 
 
 .shopping-cart{
-    background-color: rgba(255, 153, 0, 0.30);
+    
     width: 264px;
     height: 100%;
 
@@ -33,4 +33,32 @@
     height: 100px;
     width: 100px;
     margin: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 57px 0px 0px 0px;
+}
+
+.buttons button{
+    margin: 16px;
+    padding: 14px 82px 13px 72px;
+    color: #FFF;
+
+    /* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    border-radius: 4px;
+}
+
+.clear-btn{
+    background: #FF3030;
+}
+.review-btn{
+    background: #F90;
 }

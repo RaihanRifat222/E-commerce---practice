@@ -57,7 +57,7 @@ const Shop = () => {
         let exist = false;
         for (const item of cart) {
             if (item.id === product.id){
-                console.log(item.quantity);
+               
                 item.quantity = item.quantity + 1;
                 exist = true;
                 setCart([...cart]);
