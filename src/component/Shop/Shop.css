@@ -12,39 +12,10 @@
     margin: 200px 45px 315px 104px;
 }
 
-.shopping-cart{
-    background-color: rgba(255, 153, 0, 0.30);
-    width: 264px;
-    height: 100%;
-    position: absolute;
+.cart-container{
+    position: fixed;
     right: 0;
-
-    font-family: Lato;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #1C2B35;
-
+    top: 60px;
+    height: 100%;
 }
 
-.shopping-cart p, h4, ul{
-
-    margin: 28px 43px 25px 45px;
-}
-
-.product-name{
-    font-family: Lato;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.032px;
-    color: #0E161A;
-}
-
-.shopping-cart ul li img{
-    height: 100px;
-    width: 100px;
-    margin: 20px;
-}

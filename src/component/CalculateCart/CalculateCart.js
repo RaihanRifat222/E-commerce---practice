@@ -1,10 +1,11 @@
 
 
 const CalculateCart = (products) => {
-    let items = products.length;
+    let items = 0;
     let totalPrice = 0;
     products.forEach(product => {
-        totalPrice += product.price;
+        items+= product.quantity;
+        totalPrice += (product.price* product.quantity);
     });
 
     let shippingCharge = 5;
@@ -17,7 +18,7 @@ const CalculateCart = (products) => {
         items: items,
         totalPrice: totalPrice,
         shippingCharge: shippingCharge,
-        tax: tax,
+        tax: tax.toFixed(2),
         grandTotal: grandTotal
     }
 
