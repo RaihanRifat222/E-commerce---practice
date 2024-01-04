@@ -30,7 +30,7 @@ const CartItem = ({item, increaseProduct,decreaseProduct,deleteProduct}) => {
                 
                 <div className='flex'>
                     <div className="quantity p-8 flex">
-                    <FontAwesomeIcon icon={faSquarePlus}  className='btn h-9' onClick={() => increaseProduct(item, true)} />
+                    <FontAwesomeIcon icon={faSquarePlus}  className='btn h-9' onClick={() => increaseProduct(item)} />
                     <p className='text-xl px-6'>{item.quantity}</p>
                     <FontAwesomeIcon icon={faSquareMinus}   className='btn h-9' onClick={()=> decreaseProduct(item)} />
                     </div>

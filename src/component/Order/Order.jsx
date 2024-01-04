@@ -64,13 +64,22 @@ const Order = () => {
     localStorage.setItem('productCount', JSON.stringify(cart));
     window.location.reload();
 }
+
+    const clearCart = () => {
+       
+        localStorage.removeItem('productCount');
+        setCart([]);
+        // window.location.reload();
+    }
     return (
         <div className='order-container mt-20 flex'>
             <div className="preview-container">
                 <CartPreview cart={getProductsFromLocalStorage()} increaseProduct={increaseProduct} decreaseProduct={decreaseProduct} deleteProduct={deleteProduct}></CartPreview>
             </div>
             <div className="m-32 bg-orange-200 h-1/2 right-14 top-8  ">
-                <Cart cart= {getProductsFromLocalStorage()}></Cart>
+                <Cart cart= {getProductsFromLocalStorage()} clearCart={clearCart}>
+                    <button className="review-btn">Proceed to Checkout</button>
+                </Cart>
             </div>
             
         </div>

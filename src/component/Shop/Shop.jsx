@@ -4,11 +4,12 @@ import './Shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import getShoppingCart from '../CalculateCart/GetShoppingCart';
+import { Link } from 'react-router-dom';
 const Shop = () => {
     const [products, setProducts] = useState ([]);
     const [cart, setCart] = useState ([]);
-    
-    const productCount = localStorage.getItem('productCount') ? JSON.parse(localStorage.getItem('productCount')) : {};
+    const [productCount, setProductCount] = useState(localStorage.getItem('productCount') ? JSON.parse(localStorage.getItem('productCount')) : {});
+    // const productCount = localStorage.getItem('productCount') ? JSON.parse(localStorage.getItem('productCount')) : {};
     useEffect(() => {
         let previousCart = getShoppingCart();
         if (previousCart){
@@ -71,8 +72,15 @@ const Shop = () => {
             setCart(newCart);
         }
 
-
         
+        
+    }
+
+    const clearCart = () => {
+        setProductCount({});
+        localStorage.setItem('productCount', JSON.stringify({}));
+        setCart([]);
+        // window.location.reload();
     }
     return (
         <div className='shop'>
@@ -84,7 +92,12 @@ const Shop = () => {
 
             
             <div className="cart-container">
-            <Cart cart= {cart}></Cart>
+            <Cart cart= {cart} clearCart={clearCart}> 
+            <Link to='/order'> 
+            <button className="review-btn">Review Order
+            </button>
+            </Link>
+            </Cart>
 
                
             </div>

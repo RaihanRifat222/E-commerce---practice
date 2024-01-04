@@ -3,14 +3,14 @@ import CalculateCart from "../CalculateCart/CalculateCart";
 import './Cart.css';
 const Cart = (props) => {
 
-    const {cart} = props;
+    const {cart,clearCart, children} = props;
 
     const price = CalculateCart(cart);
 
-    const clearCart = () => {
-        localStorage.removeItem('productCount');
-        window.location.reload();
-    }
+    // const clearCart = () => {
+    //     localStorage.removeItem('productCount');
+    //     window.location.reload();
+    // }
 
     return (
         <div className="cart">
@@ -26,8 +26,9 @@ const Cart = (props) => {
             </div>
 
             <div className="buttons">
-                <button className="clear-btn" onClick={clearCart}>Clear Cart</button>
-                <button className="review-btn">Review Order</button>
+                <button className="clear-btn" onClick={()=>clearCart()}>Clear Cart</button>
+                
+                {children}
             </div>
         </div>
     );
