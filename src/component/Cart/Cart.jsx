@@ -4,6 +4,7 @@ import './Cart.css';
 const Cart = (props) => {
 
     const {cart} = props;
+
     const price = CalculateCart(cart);
 
     const clearCart = () => {
@@ -12,7 +13,7 @@ const Cart = (props) => {
     }
 
     return (
-        <div>
+        <div className="cart">
             <div className="shopping-cart">
                 <h4>Order Summary</h4>
                 <p>Selected Items: {price.items}</p>

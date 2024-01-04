@@ -51,7 +51,7 @@ const Shop = () => {
  
     const handleAddToCart = (product) => {
         
-
+        
         let newCart = [];
         
         let exist = false;
